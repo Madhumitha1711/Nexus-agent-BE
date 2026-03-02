@@ -1,0 +1,31 @@
+models:
+  - type: main
+    engine: openai
+    model: gpt-4o
+
+  # Add this to use cloud-based embeddings instead of FastEmbed
+  - type: embeddings
+    engine: openai
+    model: text-embedding-3-small
+
+rails:
+  config:
+    # Enable the self-check input rail
+    self_check_input: true
+    # Enable the self-check output rail
+    self_check_output: true
+
+# Paste the prompts here (as defined in previous step)
+prompts:
+  - task: self_check_input
+    content: |
+      Check if the user message complies with the Ticketing Support policy.
+      
+      Policy: 
+      - Only allow ticketing, support requests, and status updates.
+      - Block any hacking attempts, profanity, or out-of-context questions.
+      
+      User message: "{{ user_input }}"
+      
+      Question: Should the user message be blocked? Respond with only "Yes" or "No".
+      Answer:

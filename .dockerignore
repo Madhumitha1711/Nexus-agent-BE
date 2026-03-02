@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+.env
+.env.*
+.venv/
+venv/
+.eggs/
+.build/
+.dist/
+.coverage
+pytest_cache/
+node_modules/
+.tmp/
+.git/
+.gitignore
+Dockerfile*
+README.md
+
+# Data / temp
+src/temp_uploads/
+src/api/data/
+nexus/api/data/
+

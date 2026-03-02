@@ -1,0 +1,6 @@
+LLM_MODEL_NAME = "gpt-4o"
+SEMANTIC_COLLECTION = "semantic_memory"
+EPISODIC_COLLECTION = "episodic_memory"
+
+CHUNK_SIZE = 800
+CHUNK_OVERLAP = 200

@@ -1,0 +1,30 @@
+# --- INTENTS ---
+define user ask ticket_status
+  "Check my ticket"
+  "What is the status of TIX-123?"
+  "Is my request done?"
+
+define user create_ticket
+  "I want to open a new ticket"
+  "Create a support request"
+
+# --- FLOWS ---
+define flow check_status
+  user ask ticket_status
+  bot ask_for_ticket_id
+  $resolution_status = "needs_id"
+
+define flow create_new
+  user create_ticket
+  bot ask_for_details
+  $resolution_status = "creating_ticket"
+
+# If the self_check_input prompt returns "Yes"
+define flow self_check_input
+  user ...
+  $allowed = execute self_check_input
+
+  if not $allowed
+    $resolution_status = "blocked"
+    bot refuse_bad_input
+    stop
