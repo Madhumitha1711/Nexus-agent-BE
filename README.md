@@ -2,6 +2,10 @@
 
 Nexus Agent is a sophisticated, multi-faceted AI agent designed to handle complex support tasks by leveraging a combination of memory systems, planning capabilities, and tool usage.
 
+> **[📄 View the Collaborative Agent Presentation (PDF)](https://github.com/Madhumitha1711/Nexus-agent-BE/blob/main/Collaborative_Agent.pdf)**
+> 
+> *A comprehensive overview of the agent's architecture, memory systems, and workflow design.*
+
 ## Features
 
 - **Multi-Modal Input:** Ingests data from various sources including chat, support tickets, and raw text.
